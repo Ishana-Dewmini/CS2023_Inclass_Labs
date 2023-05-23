@@ -19,10 +19,10 @@ void primMST(int graph[V][V], int start_node) {
 
         // Find the minimum weight edge connecting the visited and unvisited vertices
         for (int i = 0; i < connection.size(); i++) {
-            int vertex = connection[i];
+            int Node = connection[i];
             for (int j = 0; j < V; j++) {
-                if (!visited[j] && graph[vertex][j] != 0 && graph[vertex][j] < min_weight) {
-                    min_weight = graph[vertex][j];
+                if (!visited[j] && graph[Node][j] != 0 && graph[Node][j] < min_weight) {
+                    min_weight = graph[Node][j];
                     min_index = j;
                     min_connection_index = i;
                 }
